@@ -45,7 +45,7 @@ if input == 'h'
   card_total += deal_card
 elsif input == 's'
   card_total
-else 
+else
   invalid_command
   prompt_user
   end
@@ -63,4 +63,3 @@ end
 def runner
   # code runner here
 end
-    
