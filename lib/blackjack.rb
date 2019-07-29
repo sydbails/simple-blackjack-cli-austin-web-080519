@@ -30,7 +30,7 @@ end
 
 def initial_round
   # code #initial_round here
-  card_one = deal_card
+card_one = deal_card
 card_two = deal_card
 card_total = card_one + card_two
 display_card_total(card_total)
@@ -40,15 +40,16 @@ end
 def hit?(card_total)
   # code hit? here
   prompt_user
-input = get_user_input
-if input == 'h'
-  card_total += deal_card
-elsif input == 's'
-  card_total
-else
-  invalid_command
-  prompt_user
-  end
+  input = get_user_input
+  case input
+    when "h"
+      num += deal_card
+    when "s"
+      num
+    else
+      invalid_command
+      prompt_user
+    end
 end
 
 def invalid_command
